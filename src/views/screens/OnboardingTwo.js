@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import COLORS from '../../constants/colors';
 import OTPBox from '../components/Box';
+import PDFView from '../components/PdfView';
 
 const OnboardingTwo = ({navigation}) => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const OnboardingTwo = ({navigation}) => {
           }}>
           Form
         </Text>
+        <PDFView />
       </View>
       <View style={styles.otpView}>
         <Text style={[styles.heading, {color: COLORS.white}]}>Enter OTP</Text>

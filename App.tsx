@@ -24,8 +24,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="OnboardingOne" component={OnboardingOne} />
         <Stack.Screen name="OnboardingTwo" component={OnboardingTwo} />
+        <Stack.Screen name="OnboardingOne" component={OnboardingOne} />
         <Stack.Screen name="Success" component={Success} />
       </Stack.Navigator>
     </NavigationContainer>
