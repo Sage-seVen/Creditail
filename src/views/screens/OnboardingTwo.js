@@ -34,7 +34,7 @@ const OnboardingTwo = ({navigation}) => {
       {/* <ScrollView contentContainerStyle={{paddingTop: 50}}> */}
       <View style={styles.formView}>
         <Text style={styles.heading}> Step 2 </Text>
-        <Text style={styles.subHeading}> Please enter your details </Text>
+        <Text style={styles.subHeading}> Please enter OTP </Text>
         <Text
           style={{
             color: 'black',

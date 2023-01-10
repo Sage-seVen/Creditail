@@ -4,13 +4,13 @@ import Pdf from 'react-native-pdf';
 
 export default class PDFView extends React.Component {
   render() {
-    const source = {
-      uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf',
-      cache: true,
-    };
+    // const source = {
+    //   uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf',
+    //   cache: true,
+    // };
 
     //const source = require('./test.pdf');  // ios only
-    //const source = {uri:'bundle-assets://test.pdf' };
+    const source = {uri: 'bundle-assets://pdf/sample.pdf'};
     //const source = {uri:'file:///sdcard/test.pdf'};
     //const source = {uri:"data:application/pdf;base64,JVBERi0xLjcKJc..."};
     //const source = {uri:"content://com.example.blobs/xxxxxxxx-...?offset=0&size=xxx"};
