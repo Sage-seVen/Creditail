@@ -27,7 +27,7 @@ const OTPBox = ({handleSubmitOtp}) => {
     } else {
       //throw an alert here
     }
-    setTimeout(() => setSubmitted(false), 3000); //mimic api call
+    setTimeout(() => setSubmitted(false), 2000); //mimic api call
   };
 
   return (

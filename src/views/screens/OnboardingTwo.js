@@ -22,7 +22,7 @@ const OnboardingTwo = ({navigation}) => {
   }, []);
 
   const handleSubmitOtp = otpValue => {
-    if (otpValue === '1234') {
+    if (otpValue.length === 4) {
       console.log('viola you are authenticated');
       //call api to authenticate
       navigation.navigate('Success');

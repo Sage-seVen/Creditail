@@ -24,7 +24,8 @@ const OnboardingOne = ({navigation}) => {
   const [errors, setErrors] = React.useState({});
   const [allowContinue, setAllowContinue] = React.useState(false);
   const [showDob, setShowDob] = React.useState(false);
-  const [loading, setLoading] = React.useState(false);
+
+  const refArr = Array(5).fill(React.useRef());
 
   const handleOnchange = (text, input) => {
     setUserData(prevState => ({...prevState, [input]: text}));
