@@ -1,17 +1,17 @@
 import React from 'react';
-import {View, Text, TextInput, StyleSheet} from 'react-native';
+import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 
-// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import COLORS from '../../constants/colors';
+
 const Input = ({
   label,
   iconName,
   error,
-  password,
+  iconVisibilty,
   onFocus = () => {},
   ...props
 }) => {
-  const [hidePassword, setHidePassword] = React.useState(password);
+  const [showIcon, setShowIcon] = React.useState(iconVisibilty);
   const [isFocused, setIsFocused] = React.useState(false);
 
   return (
@@ -29,10 +29,6 @@ const Input = ({
             alignItems: 'center',
           },
         ]}>
-        {/* <Icon
-          name={iconName}
-          style={{color: COLORS.darkBlue, fontSize: 22, marginRight: 10}}
-        /> */}
         <TextInput
           autoCorrect={false}
           onFocus={() => {
@@ -40,18 +36,16 @@ const Input = ({
             setIsFocused(true);
           }}
           onBlur={() => setIsFocused(false)}
-          secureTextEntry={hidePassword}
           style={{color: COLORS.black, flex: 1}}
           placeholderTextColor={COLORS.placeholderText}
           {...props}
         />
-        {/* {password && (
-          <Icon
-            onPress={() => setHidePassword(!hidePassword)}
-            name={hidePassword ? 'eye-outline' : 'eye-off-outline'}
-            style={{color: COLORS.darkBlue, fontSize: 22}}
+        {showIcon && (
+          <Image
+            style={{height: 30, width: 30}}
+            source={require('../../assets/checkmark.png')}
           />
-        )} */}
+        )}
       </View>
       {error && (
         <Text style={{marginTop: 7, color: COLORS.red, fontSize: 12}}>

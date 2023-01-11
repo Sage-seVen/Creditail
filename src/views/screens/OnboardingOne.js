@@ -124,6 +124,7 @@ const OnboardingOne = ({navigation}) => {
             onFocus={() => handleError(null, 'name')}
             onSubmitEditing={() => handleValidateName()}
             iconName="email-outline"
+            iconVisibilty={userData.name !== '' && errors.name === null}
             label="Shop owner name"
             placeholder="Enter store owner name"
             error={errors.name}
